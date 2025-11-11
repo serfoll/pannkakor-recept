@@ -46,18 +46,8 @@ main {
   padding: 48px 16px;
 }
 
-h1,
-h2 {
-  font-weight: bold;
-}
-
-h1 {
-  color: #a10000;
-  font-size: 28px;
-}
-
-h2 {
-  font-weight: 24px;
+section {
+  margin-bottom: 24px;
 }
 
 ol,
@@ -65,8 +55,8 @@ ul {
   margin-left: 16px;
 }
 
-section {
-  margin-bottom: 24px;
+li {
+  line-height: 32px;
 }
 
 .ma {
@@ -79,6 +69,23 @@ section {
 
 .mb-16 {
   margin-bottom: 16px;
+}
+
+#heading,
+.sub-heading {
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+#heading {
+  color: #a10000;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.sub-heading {
+  font-size: 24px;
+  line-height: 33px;
 }
 
 .image-container {
@@ -105,10 +112,17 @@ section {
 }
 
 .servings-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.servings-gallery__image {
-  display: block;
-  max-height: 467px;
-  max-width: 100%;
+@media screen and (min-width: 768px) {
+  main {
+    padding: 48px;
+  }
+
+  .servings-gallery {
+    flex-direction: row;
+  }
 }

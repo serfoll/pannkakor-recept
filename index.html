@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Enkelt recept på pannkakor</title>
     <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Enkelt recept på pannkakor</title>
   </head>
   <body>
-    <header>
-      <img
-        src="./assets/header_banner.png"
-        alt="Pannkakor med hallon och grädde på tallrik"
-      />
+    <header class="ma">
+      <figure class="image-container">
+        <img
+          class="header__banner"
+          src="./assets/header_banner.png"
+          alt="Pannkakor med hallon och grädde på en brunn tallrik."
+        />
+      </figure>
     </header>
-    <main>
-      <h1>Enkelt recept på pannkakor</h1>
-      <p>
-        Gör traditionella tunna pannkakor med detta enkla och goda
-        pannkaksrecept.
-      </p>
-      <section>
-        <h2>Ingredienser</h2>
-        <p>För 4 portioner</p>
+    <main class="ma">
+      <h1 id="heading" class="mb-24">Enkelt recept på pannkakor</h1>
+      <div class="summary mb-24">
+        <p>
+          Gör traditionella tunna pannkakor med detta enkla och goda
+          pannkaksrecept.
+        </p>
+      </div>
+      <section class="mb-24">
+        <h2 class="sub-heading mb-16">Ingredienser</h2>
+        <p class="mb-16">För 4 portioner</p>
         <ul>
           <li>2 1/2 dl vetemjöl</li>
           <li>1/2 tsk salt</li>
@@ -31,41 +41,35 @@
           <li>sylt, bär eller frukt till servering</li>
         </ul>
       </section>
-      <section>
-        <h2>Så här gör du</h2>
-        <ul>
-          <ol>
-            Blanda mjöl och salt i en bunke.
-          </ol>
-          <ol>
-            Vispa i hälften av mjölken och vispa till en slät smet.
-          </ol>
-          <ol>
-            Vispa i resten av mjölken och äggen.
-          </ol>
-          <ol>
-            Låt smeten vila ca 10 minuter.
-          </ol>
-          <ol>
+      <section class="mb-24">
+        <h2 class="sub-heading mb-16">Så här gör du</h2>
+        <ol>
+          <li>Blanda mjöl och salt i en bunke.</li>
+          <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
+          <li>Vispa i resten av mjölken och äggen.</li>
+          <li>Låt smeten vila ca 10 minuter.</li>
+          <li>
             Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
             eller pannkakspanna.
-          </ol>
-          <ol>
-            Servera med sylt, bär eller frukt
-          </ol>
-        </ul>
+          </li>
+          <li>Servera med sylt, bär eller frukt</li>
+        </ol>
       </section>
-      <section>
-        <h2>Serverings förslag</h2>
-        <div>
-          <img
-            src="./assets/pannakakor_1.png"
-            alt="Staplade pannkakor på en tallrik med en gaffel."
-          />
-          <img
-            src="./assets/pannakakor_2.png"
-            alt="3st pannkakor servering med ricotta och apelsin skivor på tallrikar."
-          />
+      <section class="mb-24">
+        <h2 class="sub-heading mb-16">Serverings förslag</h2>
+        <div class="servings-gallery">
+          <figure class="image-container mb-24">
+            <img
+              src="./assets/pannakakor_1.png"
+              alt="Staplade pannkakor på en tallrik med en gaffel."
+            />
+          </figure>
+          <figure class="image-container">
+            <img
+              src="./assets/pannakakor_2.png"
+              alt="3st pannkakor servering med ricotta och apelsin skivor på tallrikar."
+            />
+          </figure>
         </div>
       </section>
     </main>

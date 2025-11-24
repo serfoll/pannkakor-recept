@@ -1,3 +1,5 @@
+/** @format */
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -31,7 +33,7 @@ img {
 
 body {
   background-color: rgba(161, 6, 0, 0.3);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -72,13 +74,13 @@ li {
   margin-bottom: 16px;
 }
 
-#heading,
+.heading,
 .sub-heading {
   font-weight: bold;
   letter-spacing: 0;
 }
 
-#heading {
+.heading {
   color: #a10000;
   font-size: 28px;
   line-height: 38px;
@@ -107,9 +109,13 @@ li {
   max-width: 100%;
 }
 
-.summary {
+.lead {
   background-color: #ebebeb;
   padding: 16px;
+}
+
+.lead b {
+  font-weight: normal;
 }
 
 .servings-gallery {

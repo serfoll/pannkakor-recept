@@ -14,28 +14,20 @@
     <title>Enkelt recept på pannkakor</title>
   </head>
   <body>
-    <header class="ma">
-      <figure class="image-container">
-        <img
-          class="header__banner"
-          src="./assets/header_banner.png"
-          alt="Pannkakor med hallon och grädde på en brunn tallrik."
-        />
-      </figure>
-    </header>
-    <!-- HEADER SLUT -->
-
-    <main class="ma">
-      <article>
-        <h1 class="heading mb-24">Enkelt recept på pannkakor</h1>
-        <p class="lead mb-24">
-          <b>
+    <article class="ma">
+      <header class="mb-24">
+        <div aria-hidden="true" class="header__banner"></div>
+        <div class="header__content content--padding">
+          <h1 class="heading mb-24">Enkelt recept på pannkakor</h1>
+          <p class="lead">
             Gör traditionella tunna pannkakor med detta enkla och goda
             pannkaksrecept.
-          </b>
-        </p>
-        <!-- SUMMERING SLUT -->
+          </p>
+        </div>
+      </header>
+      <!-- HEADER SLUT -->
 
+      <main class="content--padding">
         <section class="mb-24">
           <h2 class="sub-heading mb-16">Ingredienser</h2>
           <p class="mb-16">För 4 portioner</p>
@@ -66,26 +58,26 @@
         </section>
         <!-- INSTRUKTIONER SLUT -->
 
-        <section class="mb-24">
+        <section>
           <h2 class="sub-heading mb-16">Serverings förslag</h2>
           <div class="servings-gallery">
             <figure class="image-container">
-              <img
-                src="./assets/pannakakor_1.png"
-                alt="Staplade pannkakor på en tallrik med en gaffel."
-              />
+              <img src="./assets/pannakakor_1.png" alt="" />
+              <figcaption class="sr-only">
+                Serverade pannakakor med bär vid sidan av.
+              </figcaption>
             </figure>
             <figure class="image-container">
-              <img
-                src="./assets/pannakakor_2.png"
-                alt="3st pannkakor servering med ricotta och apelsin skivor på tallrikar."
-              />
+              <img src="./assets/pannakakor_2.png" alt="" />
+              <figcaption class="sr-only">
+                Serverade pannkakor med ricotta och apelsin skivor.
+              </figcaption>
             </figure>
           </div>
         </section>
         <!-- SERVERING SLUT -->
-      </article>
-    </main>
-    <!-- MAIN SLUT -->
+      </main>
+      <!-- MAIN SLUT -->
+    </article>
   </body>
 </html>

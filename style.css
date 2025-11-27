@@ -2,13 +2,13 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -36,30 +36,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+article {
+  background-color: white;
+  max-width: calc(1280 / 16 * 1rem);
+  padding-block-end: 4rem;
+}
+
 header {
   background-color: white;
-  border: 1px solid white;
-  height: 500px;
-  max-width: 1280px;
-}
-
-main {
-  background-color: white;
-  max-width: 1280px;
-  padding: 48px 16px;
-}
-
-section {
-  margin-bottom: 24px;
+  border: calc(1 / 16 * 1rem) solid white;
 }
 
 ol,
 ul {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 li {
-  line-height: 32px;
+  line-height: 2rem;
 }
 
 .ma {
@@ -67,11 +61,29 @@ li {
 }
 
 .mb-24 {
-  margin-bottom: 24px;
+  margin-block-end: calc(24 / 16 * 1rem);
 }
 
 .mb-16 {
-  margin-bottom: 16px;
+  margin-block-end: 1rem;
+}
+
+.pb-24 {
+  padding-block-end: calc(24 / 16 * 1rem);
+}
+
+.content--padding {
+  padding-inline: 1rem;
+}
+
+.header__banner {
+  background: #dddddd url('./assets/header_banner.png') no-repeat center;
+  height: 500px;
+  width: 100%;
+}
+
+.header__content {
+  width: 100%;
 }
 
 .heading,
@@ -82,13 +94,25 @@ li {
 
 .heading {
   color: #a10000;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: calc(28 / 16 * 1rem);
+  line-height: calc(38 / 16 * 1rem);
+  margin-block-start: 3rem;
+}
+
+.lead {
+  background-color: #ebebeb;
+  padding: 1rem;
 }
 
 .sub-heading {
-  font-size: 24px;
+  font-size: calc(24 / 16 * 1rem);
   line-height: 33px;
+}
+
+.servings-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 / 16 * 1rem);
 }
 
 .image-container {
@@ -103,30 +127,21 @@ li {
   width: 100%;
 }
 
-.header__banner {
-  display: block;
-  max-height: 500px;
-  max-width: 100%;
+.sr-only {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 0rem;
+  margin: calc(-1 / 16 * 1rem);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0rem;
 }
 
-.lead {
-  background-color: #ebebeb;
-  padding: 16px;
-}
-
-.lead b {
-  font-weight: normal;
-}
-
-.servings-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-@media screen and (min-width: 768px) {
-  main {
-    padding: 48px;
+@media screen and (min-width: 48rem) {
+  .content--padding {
+    padding-inline: 3rem;
   }
 
   .servings-gallery {

@@ -129,15 +129,14 @@ img {
 }
 
 .sr-only {
-  border-width: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 0rem;
-  margin: calc(-1 / 16 * 1rem);
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 0rem;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: calc(-1 / 16 * 1rem) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 
 @media screen and (min-width: 48rem) {

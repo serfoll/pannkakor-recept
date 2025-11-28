@@ -25,17 +25,22 @@
       <!-- HEADER SLUT -->
 
       <main class="ma">
-        <article class="content__container content--padding">
+        <article
+          class="content__container content--padding"
+          aria-labelledby="page-heading"
+        >
           <header class="content__header">
-            <h1 class="heading mb-24">Enkelt recept på pannkakor</h1>
+            <h1 id="page-heading" class="heading mb-24">
+              Enkelt recept på pannkakor
+            </h1>
             <p class="lead">
               Gör traditionella tunna pannkakor med detta enkla och goda
               pannkaksrecept.
             </p>
           </header>
 
-          <section class="mb-24">
-            <h2 class="sub-heading mb-16">Ingredienser</h2>
+          <section class="mb-24" aria-labelledby="heading-ingre">
+            <h2 id="heading-ing" class="sub-heading mb-16">Ingredienser</h2>
             <p class="mb-16">För 4 portioner</p>
             <ul>
               <li>2 1/2 dl vetemjöl</li>
@@ -48,8 +53,8 @@
           </section>
           <!-- INGREDIENSER SLUT -->
 
-          <section class="mb-24">
-            <h2 class="sub-heading mb-16">Så här gör du</h2>
+          <section class="mb-24" aria-labelledby="heading-instr">
+            <h2 id="heading-instr" class="sub-heading mb-16">Så här gör du</h2>
             <ol>
               <li>Blanda mjöl och salt i en bunke.</li>
               <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
@@ -64,8 +69,10 @@
           </section>
           <!-- INSTRUKTIONER SLUT -->
 
-          <section>
-            <h2 class="sub-heading mb-16">Serverings förslag</h2>
+          <section aria-label="heading-serve">
+            <h2 id="heading-serve" class="sub-heading mb-16">
+              Serverings förslag
+            </h2>
             <div class="gallery">
               <figure class="gallery__image--container">
                 <img

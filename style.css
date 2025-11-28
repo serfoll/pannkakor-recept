@@ -38,13 +38,7 @@ body {
 
 article {
   background-color: white;
-  max-width: calc(1280 / 16 * 1rem);
   padding-block-end: 4rem;
-}
-
-header {
-  background-color: white;
-  border: calc(1 / 16 * 1rem) solid white;
 }
 
 ol,
@@ -54,6 +48,10 @@ ul {
 
 li {
   line-height: 2rem;
+}
+
+img {
+  display: block;
 }
 
 .ma {
@@ -76,14 +74,21 @@ li {
   padding-inline: 1rem;
 }
 
-.header__banner {
+.banner {
+  background-color: white;
+  border: calc(1 / 16 * 1rem) solid white;
+}
+
+.banner img {
   background: #dddddd url('./assets/header_banner.png') no-repeat center;
   height: 500px;
+  object-fit: cover;
   width: 100%;
 }
 
-.header__content {
-  width: 100%;
+.content__header {
+  padding-block-start: 3rem;
+  padding-block-end: calc(24 / 16 * 1rem);
 }
 
 .heading,
@@ -96,7 +101,6 @@ li {
   color: #a10000;
   font-size: calc(28 / 16 * 1rem);
   line-height: calc(38 / 16 * 1rem);
-  margin-block-start: 3rem;
 }
 
 .lead {
@@ -109,20 +113,16 @@ li {
   line-height: 33px;
 }
 
-.servings-gallery {
+.gallery {
   display: flex;
+  height: 100%;
   flex-direction: column;
   gap: calc(24 / 16 * 1rem);
-}
-
-.image-container {
-  height: 100%;
   overflow: hidden;
   width: 100%;
 }
 
-.image-container img {
-  display: block;
+.gallery__image--container img {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -141,11 +141,15 @@ li {
 }
 
 @media screen and (min-width: 48rem) {
+  .wrapper {
+    max-width: calc(1280 / 16 * 1rem);
+  }
+
   .content--padding {
     padding-inline: 3rem;
   }
 
-  .servings-gallery {
+  .gallery {
     flex-direction: row;
   }
 }

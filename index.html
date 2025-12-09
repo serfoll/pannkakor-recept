@@ -11,20 +11,31 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <title>Enkelt recept på pannkakor</title>
+    <title>Enkla Recpet - Recept på pannkakor</title>
   </head>
   <body>
     <div class="wrapper ma">
-      <header class="banner">
-        <img
-          class="header__banner"
-          src="./assets/header_banner.png"
-          alt="Pannakakor serverade med hallon och yoghurt på topp."
-        />
+      <header>
+        <a class="brand" href="/">ER.</a>
+        <nav aria-label="Main navigation">
+          <ul role="list">
+            <li><a href="./recipes.html">Recept</a></li>
+            <li><a href="./about.html">Om oss</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button>Login</button>
       </header>
       <!-- HEADER SLUT -->
 
       <main class="ma">
+        <div class="banner">
+          <img
+            class="header__banner"
+            src="./assets/header_banner.png"
+            alt="Pannakakor serverade med hallon och yoghurt på topp."
+          />
+        </div>
         <article
           class="content__container content--padding"
           aria-labelledby="page-heading"

@@ -1,110 +1,215 @@
-<!-- @format -->
-
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <title>Enkla Recpet - Recept på pannkakor</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="style" href="./css/theme.css" />
+    <link href="./css/theme.css" rel="stylesheet" />
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Enkla Recept</title>
   </head>
   <body>
-    <div class="wrapper ma">
-      <header>
-        <a class="brand" href="/">ER.</a>
-        <nav aria-label="Main navigation">
-          <ul role="list">
-            <li><a href="./recipes.html">Recept</a></li>
-            <li><a href="./about.html">Om oss</a></li>
-            <li><a href="./contact.html">Kontakt</a></li>
-          </ul>
-        </nav>
-        <button>Login</button>
-      </header>
-      <!-- HEADER SLUT -->
+    <div class="scheme py-2-xl">
+      <ul class="skiplink">
+        <li>
+          <a href="#content">Hoppa till innehåll</a>
+        </li>
+        <li>
+          <a href="#nav">Hoppa till navigering</a>
+        </li>
+      </ul>
+      <!-- .skiplink end -->
 
-      <main class="ma">
-        <div class="banner">
-          <img
-            class="header__banner"
-            src="./assets/header_banner.png"
-            alt="Pannakakor serverade med hallon och yoghurt på topp."
-          />
-        </div>
-        <article
-          class="content__container content--padding"
-          aria-labelledby="page-heading"
-        >
-          <header class="content__header">
-            <h1 id="page-heading" class="heading mb-24">
-              Enkelt recept på pannkakor
-            </h1>
-            <p class="lead">
-              Gör traditionella tunna pannkakor med detta enkla och goda
-              pannkaksrecept.
-            </p>
-          </header>
+      <div class="content-grid">
+        <header class="header px-md py-sm clr-bg-light radius-round">
+          <a class="header-left brand" href="/">ER.</a>
 
-          <section class="mb-24" aria-labelledby="heading-ingre">
-            <h2 id="heading-ing" class="sub-heading mb-16">Ingredienser</h2>
-            <p class="mb-16">För 4 portioner</p>
-            <ul>
-              <li>2 1/2 dl vetemjöl</li>
-              <li>1/2 tsk salt</li>
-              <li>6 dl mjölk</li>
-              <li>3 ägg</li>
-              <li>smör (till stekning)</li>
-              <li>sylt, bär eller frukt till servering</li>
-            </ul>
-          </section>
-          <!-- INGREDIENSER SLUT -->
+          <div class="header-middle">
+            <label for="toggle-main-nav" class="nav-toggler">
+              <input
+                type="checkbox"
+                id="toggle-main-nav"
+                class="nav-toggler-box sr-only"
+              />
+              <span class="sr-only">Toggla huvud navigatorn</span>
+              <span aria-hidden="true" class="hamburger">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+              </span>
+            </label>
+            <!-- nav-toggler end -->
+            <nav class="main-nav" id="nav" aria-label="Huvud navigator">
+              <ul class="nav-links" role="list">
+                <li>
+                  <a class="text-upper" href="./recipes.html">All Recept</a>
+                </li>
+                <li><a class="text-upper" href="./about.html">Om oss</a></li>
+                <li><a class="text-upper" href="./contact.html">Kontakt</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- header-middle end -->
 
-          <section class="mb-24" aria-labelledby="heading-instr">
-            <h2 id="heading-instr" class="sub-heading mb-16">Så här gör du</h2>
-            <ol>
-              <li>Blanda mjöl och salt i en bunke.</li>
-              <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
-              <li>Vispa i resten av mjölken och äggen.</li>
-              <li>Låt smeten vila ca 10 minuter.</li>
-              <li>
-                Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
-                eller pannkakspanna.
-              </li>
-              <li>Servera med sylt, bär eller frukt</li>
-            </ol>
-          </section>
-          <!-- INSTRUKTIONER SLUT -->
-
-          <section aria-label="heading-serve">
-            <h2 id="heading-serve" class="sub-heading mb-16">
-              Serverings förslag
-            </h2>
-            <div class="gallery">
-              <figure class="gallery__image--container">
-                <img
-                  src="./assets/pannakakor_1.png"
-                  alt="Servera pannakakor med hallon och yoghurt vid sidan av."
-                />
-                <figcaption class="sr-only">Serverings förslag 1</figcaption>
-              </figure>
-              <figure class="gallery__image--container">
-                <img
-                  src="./assets/pannakakor_2.png"
-                  alt="Servera pannkakor med glass, ricotta och apelsin skivor på topp."
-                />
-                <figcaption class="sr-only">Serverings förslag 2</figcaption>
-              </figure>
+          <div class="header-right">
+            <button class="text-upper">Login</button>
+            <div class="clr-scheme-widget">
+              <label for="scheme-toggler" class="scheme-toggler-label">
+                <span class="sr-only">Mörkläge</span>
+                <span aria-hidden="true" class="toggler-indicator"></span>
+              </label>
+              <input
+                class="sr-only scheme-toggler-box"
+                type="checkbox"
+                id="scheme-toggler"
+                name="scheme-toggler"
+              />
             </div>
-          </section>
-          <!-- SERVERING SLUT -->
-        </article>
+          </div>
+          <!-- header-right end -->
+        </header>
+      </div>
+      <!-- HEADER END -->
+
+      <main id="content" class="content-grid my-2-xl">
+        <section class="hero full content-grid">
+          <div class="breakin">
+            <h1 class="text-h-1">
+              Goda måltider på bara några minuter.<br />
+              <em>Snabba</em> och
+              <em>enkla recept</em>
+              för hela veckan.
+            </h1>
+
+            <p class="text-caption">
+              Enkla Recept hjälper dig att laga bra mat utan stress. Alla recept
+              är testade, bygger på vanliga ingredienser och tar kort tid att
+              tillaga. Perfekt när vardagen kräver något både gott och enkelt.
+            </p>
+            <a class="btn-primary" href="./recipes.html">Börja utforska</a>
+          </div>
+          <img
+            class="feature img-lg radius-lg border-xs-light my-xl"
+            height="350"
+            src="https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Matlagning i vardagsköket med snabba, lättlagade rätter."
+          />
+        </section>
+        <!-- hero end -->
+
+        <section class="offers flow-block">
+          <h2 class="text-h-2 text-center">Vardagsmat är enkelt</h2>
+          <ul class="offers-list" role="list">
+            <li>
+              <article>
+                <span>Timer eller klocksymbol.</span>
+                <h3 class="text-h-3">Snabbt att laga</h3>
+                <p>
+                  Alla recept tar max 30 minuter, så att du slipper lång
+                  planering och långa kvällar i köket.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <span>Korg eller skafferihylla.</span>
+                <h3 class="text-h-3">Vanliga ingredienser</h3>
+                <p>
+                  Du behöver inga ovanliga produkter. Recepten utgår från sådant
+                  du oftast redan har hemma.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <span>Receptbok eller checklista.</span>
+                <h3 class="text-h-3">Steg-för-steg guider</h3>
+                <p>
+                  Tydliga instruktioner som gör det lätt även för ovana kockar
+                  att lyckas på första försöket.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <!-- faq end -->
+
+        <section class="habits flow-block">
+          <div class="flow-block">
+            <h2 class="text-h-2">Goda mat vanor börjar i köket</h2>
+            <p>
+              <span>
+                Att laga god mat behöver inte vara avancerat. Enkla Recept är
+                byggt för dig som vill äta bättre utan att lägga timmar på
+                planering.
+              </span>
+              <span
+                >Vi kombinerar smak, enkelhet och smarta tips så att du kan
+                skapa härliga måltider varje dag, oavsett tid och
+                erfarenhet.</span
+              >
+            </p>
+          </div>
+          <img
+            class="img-lg radius-lg border-xs-light"
+            height="350"
+            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2653&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nära bild på en enkel och färgglad vardagsrätt."
+          />
+        </section>
+        <!-- mission end -->
       </main>
-      <!-- MAIN SLUT -->
+      <!-- main end -->
+
+      <div class="content-grid">
+        <footer
+          class="footer flow-block feature px-md py-sm clr-bg-light radius-lg"
+        >
+          <section class="full content-grid features newsletter">
+            <h2 class="breakin text-h-2 text-center">
+              Få ny inspiration direkt i mejlkorgen
+            </h2>
+            <p class="breakin text-center" id="subscribe-summary">
+              Prenumerera och få nya recept, veckotips och smarta idéer för att
+              förenkla din matlagning. Inga spam, bara bra mat.
+            </p>
+            <form class="breakin">
+              <input
+                class="py-sm px-md"
+                aria-labelledby="subscribe-summary"
+                type="email"
+                placeholder="yourname@mail.com"
+                value=""
+              />
+              <button class="btn-primary" type="submit">Prenumerera</button>
+            </form>
+          </section>
+          <!-- newsletter end -->
+
+          <section class="footer-content">
+            <p>
+              Copyright &copy; 2025 Enkla Recept. En samlingsplats för snabba
+              och lättlagade recept.
+            </p>
+            <a href="#nav">
+              <span>ikon</span>
+              <span class="sr-only">Hoppa till navigation</span>
+            </a>
+          </section>
+        </footer>
+      </div>
     </div>
+    <!-- scheme end -->
   </body>
 </html>

@@ -1,11 +1,284 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enkla Recept - Våra Recepter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="style" href="./css/theme.css" />
+    <link href="./css/theme.css" rel="stylesheet" />
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Enkla Recept - Alla recept</title>
   </head>
   <body>
-    <h1>Recepter</h1>
+    <div class="scheme py-2-xl">
+      <ul class="skiplink">
+        <li>
+          <a href="#content">Hoppa till innehåll</a>
+        </li>
+        <li>
+          <a href="#nav">Hoppa till navigering</a>
+        </li>
+      </ul>
+      <!-- .skiplink end -->
+
+      <div class="content-grid">
+        <header class="header px-md py-sm clr-bg-light radius-round">
+          <a class="header-left brand" href="/">ER.</a>
+
+          <div class="header-middle">
+            <label for="toggle-main-nav" class="nav-toggler">
+              <input
+                type="checkbox"
+                id="toggle-main-nav"
+                class="nav-toggler-box sr-only"
+              />
+              <span class="sr-only">Toggla huvud navigatorn</span>
+              <span aria-hidden="true" class="hamburger">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+              </span>
+            </label>
+            <!-- nav-toggler end -->
+            <nav class="main-nav" id="nav" aria-label="Huvud navigator">
+              <ul class="nav-links" role="list">
+                <li>
+                  <a
+                    class="text-upper"
+                    href="./recipes.html"
+                    data-state="current"
+                    >All Recept</a
+                  >
+                </li>
+                <li><a class="text-upper" href="./about.html">Om oss</a></li>
+                <li><a class="text-upper" href="./contact.html">Kontakt</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- header-middle end -->
+
+          <div class="header-right">
+            <button class="text-upper">Login</button>
+            <div class="clr-scheme-widget">
+              <label for="scheme-toggler" class="scheme-toggler-label">
+                <span class="sr-only">Mörkläge</span>
+                <span aria-hidden="true" class="toggler-indicator"></span>
+              </label>
+              <input
+                class="sr-only scheme-toggler-box"
+                type="checkbox"
+                id="scheme-toggler"
+                name="scheme-toggler"
+              />
+            </div>
+          </div>
+          <!-- header-right end -->
+        </header>
+      </div>
+      <!-- HEADER END -->
+
+      <main class="content-grid my-2-xl">
+        <section class="hero py-xl">
+          <h1>utforska alla recept..</h1>
+          <p class="">Summering</p>
+        </section>
+
+        <section class="recipes">
+          <h2>Några av våra populäraste recept</h2>
+          <p>
+            Upptäck vad andra lagar just nu. Snabbt, enkelt och fullt av smak.
+          </p>
+          <ul role="list">
+            <li>
+              <article>
+                <h3>Krämig pasta med vitlök</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  En vardagsfavorit som bara kräver några ingredienser. Len och
+                  krämig sås av vitlök, smör och lite citron lyfter pastan utan
+                  ansträngning. Perfekt när du vill ha något gott på tio
+                  minuter.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Ugnsrostad lax med citron</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  Saftig lax med frisk smak av citron och örter, klar med
+                  minimal förberedelse. Servera med en snabb sallad eller
+                  potatis och du har en komplett middag. Passar lika bra till
+                  vardag som helg.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Kryddig shakshuka</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  Klassisk shakshuka med mjuka tomater, chili och spiskummin.
+                  Äggen pocheras direkt i såsen vilket ger en rustik och
+                  mättande rätt. Perfekt som brunch eller lättare middag.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <section class="recipes">
+          <h2>Ny inkomna recept</h2>
+          <p>Senast nytt från vårt team.</p>
+          <ul role="list">
+            <li>
+              <article>
+                <h3>Nudelbowl med sesam</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  En snabb bowl med krispiga grönsaker, sojasås och rostad
+                  sesam. Kombinationen av nudlar och fräsch dressing gör den
+                  både enkel och riktigt god. Toppas gärna med koriander och
+                  limsaft.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Vegetarisk tacos</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  Fylliga tacos med kryddig vegofärs och fräscha grönsaker. En
+                  snabb vardagsrätt som alla gillar och går att variera med
+                  olika toppings. Serveras gärna med lime och krämig dressing.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Citronkyckling</h3>
+                <img
+                  src="https://picsum.dev/500/500"
+                  width="300"
+                  height="300"
+                  alt=""
+                />
+                <p>
+                  Mör kyckling som steks med vitlök, citron och timjan. Såsen
+                  får naturlig syra och passar perfekt till ris eller pasta.
+                  Klar på en halvtimme och imponerar mer än arbetsinsatsen
+                  kräver.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="./recipes/enkelt-recept-pa-pannkakor.html"
+                  >Visa recept</a
+                >
+              </article>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <!-- main end -->
+
+      <div class="content-grid">
+        <footer
+          class="footer flow-block feature px-md py-sm clr-bg-light radius-lg"
+        >
+          <section class="full content-grid features newsletter">
+            <h2 class="breakin text-h-2 text-center">
+              Få ny inspiration direkt i mejlkorgen
+            </h2>
+            <p class="breakin text-center" id="subscribe-summary">
+              Prenumerera och få nya recept, veckotips och smarta idéer för att
+              förenkla din matlagning. Inga spam, bara bra mat.
+            </p>
+            <form class="breakin">
+              <input
+                class="py-sm px-md"
+                aria-labelledby="subscribe-summary"
+                type="email"
+                placeholder="yourname@mail.com"
+                value=""
+              />
+              <button class="btn-primary" type="submit">Prenumerera</button>
+            </form>
+          </section>
+          <!-- newsletter end -->
+
+          <section class="footer-content">
+            <p>
+              Copyright &copy; 2025 Enkla Recept. En samlingsplats för snabba
+              och lättlagade recept.
+            </p>
+            <a href="#nav">
+              <span>ikon</span>
+              <span class="sr-only">Hoppa till navigation</span>
+            </a>
+          </section>
+        </footer>
+      </div>
+    </div>
+    <!-- scheme end -->
   </body>
 </html>

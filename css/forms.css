@@ -1,0 +1,127 @@
+/*login modal*/
+.login-modal {
+  &:open {
+    margin: auto;
+    border: none;
+  }
+
+  .modal-container {
+    background-color: var(--clr-bg-light);
+    padding: var(--spacing-lg);
+
+    > * + * {
+      margin-block-start: clamp(
+        var(--spacing-md),
+        2vw + 0.5rem,
+        var(--spacing-xl)
+      );
+    }
+
+    .btn {
+      background-color: var(--clr-bg);
+      color: var(--clr-text-muted);
+      inline-size: webkit-fill-available; /* support for samsung internet 5.0+ */
+      block-size: fit-content;
+      padding-inline: var(--spacing-md);
+      padding-block: var(--spacing-sm);
+
+      &:hover {
+        background-color: var(--clr-bg-dark);
+      }
+    }
+  }
+}
+
+.modal-header {
+  display: flex;
+  gap: var(--d-xs);
+  justify-content: space-between;
+  gap: clamp(var(--spacing-lg), 2vw + 0.5rem, var(--spacing-2-xl));
+
+  .heading {
+    span {
+      display: block;
+      font: var(--text-body);
+      margin-block-start: var(--spacing-xs);
+    }
+  }
+
+  @media (width < 400px) {
+    flex-direction: column-reverse;
+
+    .heading {
+      text-wrap: unset;
+    }
+  }
+}
+
+.login-form {
+  label,
+  input {
+    display: block;
+    inline-size: 100%;
+  }
+
+  input {
+    border: 1px solid var(--clr-border-muted);
+    padding: var(--spacing-sm);
+    margin-block: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .btn-login {
+    inline-size: 100%;
+  }
+}
+
+.login-social {
+  .login-alt-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+
+    &::before,
+    &::after {
+      display: inline-block;
+      content: '';
+      background-color: white;
+      border: 1px solid var(--clr-border-muted);
+      flex-grow: 1;
+      border-radius: var(--radius-lg);
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-block-start: var(--spacing-sm);
+
+    .btn-social {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xs);
+
+      img {
+        inline-size: 1.2rem;
+        aspect-ratio: 1;
+      }
+
+      span {
+        font: var(--text-link);
+      }
+    }
+  }
+}
+
+.modal-footer {
+  a {
+    font: var(--text-link);
+    color: var(--clr-secondary);
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+}

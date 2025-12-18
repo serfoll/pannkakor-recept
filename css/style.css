@@ -30,7 +30,7 @@
   --text-h-2: var(--font-700) var(--d-xl-alt) var(--ff-primary);
   --text-h-3: var(--font-700) var(--d-lg) var(--ff-primary);
   --text-body: var(--d-md) var(--ff-primary);
-  --text-caption: var(--d-sm) var(--ff-primary);
+  --text-caption: var(--font-400) var(--d-sm) var(--ff-primary);
   --text-link: var(--d-md) var(--ff-primary);
   --text-link-nav: var(--font-600) var(--d-md) var(--ff-primary);
 
@@ -44,9 +44,20 @@
   --radius-lg: var(--d-lg);
 }
 
+:focus-visible {
+  border-radius: 0.3rem;
+  outline: 0.24rem dashed var(--clr-border);
+  outline-offset: 0.12rem;
+}
+
 body {
   /* background-color: var(--clr-danger-100); */
   font-family: var(--ff-primary);
+
+  /* disable scroll when dialog or navigation is open */
+  &:has(dialog:open, .nav-toggler-box:checked) {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -65,17 +76,9 @@ em {
 }
 
 a,
-input,
 button {
   cursor: pointer;
   border: none;
-
-  &:focus-visible,
-  &:focus-within {
-    border-radius: 0.3rem;
-    outline: 0.24rem dashed var(--clr-border);
-    outline-offset: 0.12rem;
-  }
 }
 
 a,
@@ -237,6 +240,10 @@ a:visited {
   object-fit: cover;
 }
 
+.btn {
+  border-radius: var(--d-xs);
+}
+
 /* BLOCKS */
 a,
 button {
@@ -333,6 +340,7 @@ button {
     gap: var(--spacing-md);
     align-content: center;
     justify-items: center;
+    flex-wrap: wrap;
 
     h1 {
       font: var(--text-h-1);
@@ -342,6 +350,7 @@ button {
         color: var(--clr-primary);
       }
     }
+
     p {
       text-align: center;
       max-inline-size: 65ch;

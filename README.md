@@ -25,3 +25,5 @@ Som features I adde include:
 ### Mobile
 
 ![Mobile Design](./screenshot/mobile.png 'Mobile Design')
+
+[Live Site](https://lexicon-recipe.netlify.app)

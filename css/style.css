@@ -504,6 +504,7 @@ button {
     padding: 0.24rem;
     overflow: hidden;
     border-radius: 0.25rem;
+    inline-size: calc(1.88rem + (0.24 * 2rem));
 
     /* span:first-of-type {
       &:before {

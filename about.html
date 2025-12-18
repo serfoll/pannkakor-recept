@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="style" href="./css/theme.css" />
+    <link href="./css/theme.css" rel="stylesheet" />
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Enkla Recept - Om oss</title>
+  </head>
+  <body>
+    <div class="scheme py-2-xl">
+      <ul class="skiplink">
+        <li>
+          <a href="#content">Hoppa till innehåll</a>
+        </li>
+        <li>
+          <a href="#nav">Hoppa till navigering</a>
+        </li>
+      </ul>
+      <!-- .skiplink end -->
+
+      <div class="content-grid">
+        <header class="header px-md py-sm clr-bg-light radius-round">
+          <a class="header-left brand" href="/">ER.</a>
+
+          <div class="header-middle">
+            <label for="toggle-main-nav" class="nav-toggler">
+              <input
+                type="checkbox"
+                id="toggle-main-nav"
+                class="nav-toggler-box sr-only"
+              />
+              <span class="sr-only">Toggla huvud navigatorn</span>
+              <span aria-hidden="true" class="hamburger">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+              </span>
+            </label>
+            <!-- nav-toggler end -->
+            <nav class="main-nav" id="nav" aria-label="Huvud navigator">
+              <ul class="nav-links" role="list">
+                <li>
+                  <a class="text-upper" href="./recipes.html">All Recept</a>
+                </li>
+                <li>
+                  <a class="text-upper" href="./about.html" data-state="current"
+                    >Om oss</a
+                  >
+                </li>
+                <li><a class="text-upper" href="./contact.html">Kontakt</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- header-middle end -->
+
+          <div class="header-right">
+            <button class="text-upper">Login</button>
+            <div class="clr-scheme-widget">
+              <label for="scheme-toggler" class="scheme-toggler-label">
+                <span class="sr-only">Mörkläge</span>
+                <span aria-hidden="true" class="toggler-indicator"></span>
+              </label>
+              <input
+                class="sr-only scheme-toggler-box"
+                type="checkbox"
+                id="scheme-toggler"
+                name="scheme-toggler"
+              />
+            </div>
+          </div>
+          <!-- header-right end -->
+        </header>
+      </div>
+      <!-- HEADER END -->
+
+      <main id="content" class="content-grid my-2-xl min-vh-100"></main>
+      <!-- main end -->
+
+      <div class="content-grid">
+        <footer
+          class="footer flow-block feature px-md py-sm clr-bg-light radius-lg"
+        >
+          <section class="full content-grid features newsletter">
+            <h2 class="breakin text-h-2 text-center">
+              Få nya inspirationer direkt i mejlkorgen
+            </h2>
+            <p class="breakin text-center" id="subscribe-summary">
+              Prenumerera och få nya recept, veckotips och smarta idéer för att
+              förenkla din matlagning. Inga spam, bara bra mat.
+            </p>
+            <form class="breakin">
+              <input
+                class="py-sm px-md"
+                aria-labelledby="subscribe-summary"
+                type="email"
+                placeholder="yourname@mail.com"
+                value=""
+              />
+              <button class="btn-primary" type="submit">Prenumerera</button>
+            </form>
+          </section>
+          <!-- newsletter end -->
+
+          <section class="footer-content">
+            <p>
+              Copyright &copy; 2025 Enkla Recept. En samlingsplats för snabba
+              och lättlagade recept.
+            </p>
+            <a href="#nav">
+              <span>&#8593;</span>
+              <span class="sr-only">Hoppa till navigation</span>
+            </a>
+          </section>
+        </footer>
+      </div>
+    </div>
+    <!-- scheme end -->
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="style" href="./css/theme.css" />
+    <link href="../css/theme.css" rel="stylesheet" />
+
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/recipes.css" rel="stylesheet" />
+    <link href="../css/singel-recipe.css" rel="stylesheet" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/header_banner.png"
+      type="media/avif"
+    />
+    <title>Enkla Recept - Alla recept</title>
+  </head>
+  <body>
+    <div class="scheme py-2-xl">
+      <ul class="skiplink">
+        <li>
+          <a href="#content">Hoppa till innehåll</a>
+        </li>
+        <li>
+          <a href="#nav">Hoppa till navigering</a>
+        </li>
+      </ul>
+      <!-- .skiplink end -->
+
+      <div class="content-grid">
+        <header class="header px-md py-sm clr-bg-light radius-round">
+          <a class="header-left brand" href="/">ER.</a>
+
+          <div class="header-middle">
+            <label for="toggle-main-nav" class="nav-toggler">
+              <input
+                type="checkbox"
+                id="toggle-main-nav"
+                class="nav-toggler-box sr-only"
+              />
+              <span class="sr-only">Toggla huvud navigatorn</span>
+              <span aria-hidden="true" class="hamburger">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+              </span>
+            </label>
+            <!-- nav-toggler end -->
+            <nav class="main-nav" id="nav" aria-label="Huvud navigator">
+              <ul role="list" class="nav-links">
+                <li>
+                  <a class="text-upper" href="../recipes.html">All Recept</a>
+                </li>
+                <li><a class="text-upper" href="../about.html">Om oss</a></li>
+                <li>
+                  <a class="text-upper" href="../contact.html">Kontakt</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- header-middle end -->
+
+          <div class="header-right">
+            <button class="text-upper">Login</button>
+            <div class="clr-scheme-widget">
+              <label for="scheme-toggler" class="scheme-toggler-label">
+                <span class="sr-only">Mörkläge</span>
+                <span aria-hidden="true" class="toggler-indicator"></span>
+              </label>
+              <input
+                class="sr-only scheme-toggler-box"
+                type="checkbox"
+                id="scheme-toggler"
+                name="scheme-toggler"
+              />
+            </div>
+          </div>
+          <!-- header-right end -->
+        </header>
+      </div>
+      <!-- HEADER END -->
+
+      <main class="content-grid my-2-xl">
+        <article class="feature content-grid">
+          <section
+            class="full hero content-grid"
+            aria-labelledby="heading-ingre"
+          >
+            <img
+              height="500"
+              class="full img-lg radius-lg border-xs-light my-end-xl"
+              src="../assets/header_banner.png"
+              alt=""
+            />
+            <h1 id="page-heading" class="heading mb-24">
+              Enkelt recept på pannkakor
+            </h1>
+            <p class="lead my-start-lg">
+              Gör traditionella tunna pannkakor med detta enkla och goda
+              pannkaksrecept.
+            </p>
+          </section>
+          <section>
+            <h2 id="heading-ing" class="sub-heading conte">Ingredienser</h2>
+            <p>För 4 portioner</p>
+            <ul>
+              <li>2 1/2 dl vetemjöl</li>
+              <li>1/2 tsk salt</li>
+              <li>6 dl mjölk</li>
+              <li>3 ägg</li>
+              <li>smör (till stekning)</li>
+              <li>sylt, bär eller frukt till servering</li>
+            </ul>
+          </section>
+          <!-- INGREDIENSER SLUT -->
+
+          <section aria-labelledby="heading-instr" class="instructions">
+            <h2 id="heading-instr" class="sub-heading">Så här gör du</h2>
+            <ol>
+              <li>Blanda mjöl och salt i en bunke.</li>
+              <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
+              <li>Vispa i resten av mjölken och äggen.</li>
+              <li>Låt smeten vila ca 10 minuter.</li>
+              <li>
+                Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
+                eller pannkakspanna.
+              </li>
+              <li>Servera med sylt, bär eller frukt</li>
+            </ol>
+          </section>
+          <!-- INSTRUKTIONER SLUT -->
+
+          <section aria-label="heading-serve">
+            <h2 id="heading-serve" class="sub-heading mb-16">
+              Serverings förslag
+            </h2>
+            <div class="gallery">
+              <figure class="">
+                <img
+                  class="radius-lg"
+                  loading="lazy"
+                  src="../assets/pannakakor_1.png"
+                  alt="Servera pannakakor med hallon och yoghurt vid sidan av."
+                />
+                <figcaption class="sr-only">Serverings förslag 1</figcaption>
+              </figure>
+              <figure class="">
+                <img
+                  class="radius-lg"
+                  loading="lazy"
+                  src="../assets/pannakakor_2.png"
+                  alt="Servera pannkakor med glass, ricotta och apelsin skivor på topp."
+                />
+                <figcaption class="sr-only">Serverings förslag 2</figcaption>
+              </figure>
+            </div>
+          </section>
+        </article>
+        <!-- SERVERING SLUT -->
+      </main>
+
+      <div class="content-grid">
+        <footer
+          class="footer flow-block feature px-md py-sm clr-bg-light radius-lg"
+        >
+          <section class="full content-grid features newsletter">
+            <h2 class="breakin text-h-2 text-center">
+              Få nya inspirationer direkt i mejlkorgen
+            </h2>
+            <p class="breakin text-center" id="subscribe-summary">
+              Prenumerera och få nya recept, veckotips och smarta idéer för att
+              förenkla din matlagning. Inga spam, bara bra mat.
+            </p>
+            <form class="breakin">
+              <input
+                class="py-sm px-md"
+                aria-labelledby="subscribe-summary"
+                type="email"
+                placeholder="yourname@mail.com"
+                value=""
+              />
+              <button class="btn-primary" type="submit">Prenumerera</button>
+            </form>
+          </section>
+          <!-- newsletter end -->
+
+          <section class="footer-content">
+            <p>
+              Copyright &copy; 2025 Enkla Recept. En samlingsplats för snabba
+              och lättlagade recept.
+            </p>
+            <a href="#nav">
+              <span>&#8593;</span>
+              <span class="sr-only">Hoppa till navigation</span>
+            </a>
+          </section>
+        </footer>
+      </div>
+    </div>
+    <!-- scheme end -->
+  </body>
+</html>

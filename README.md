@@ -1,13 +1,27 @@
-# pannkakor-recept
+# Ekla Recept
 
-[Figma Design](https://www.figma.com/design/jN5rbXkvzz9K1q20Kj0wtL/Pannkakor?node-id=0-1&p=f&t=3Cch1UoJwlQ3xX41-0) to a basic webpage using semantic HTML, CSS and mobile first design approach.
+My take on a assignement from Lexicon Front-developer bootcamp.
+
+## Challenge
+
+1. Make a recipe website using HTML and CSS
+2. Must have a page with cards
+3. Must have a form
+4. Use either grid or flex box
+
+Som features I adde include:
+
+- Mobile (hamburger menu) toggle
+- Color scheme toggle
+- Login modal
+- Prenumeration section
 
 ## Design layouts
 
 ### Desktop
 
-![Desktop Design](./screenshot/desktop_design.png "Desktop Design")
+![Desktop Design](./screenshot/desktop.png 'Desktop Design')
 
 ### Mobile
 
-![Mobile Design](./screenshot/mobile_design.png "Mobile Design")
+![Mobile Design](./screenshot/mobile.png 'Mobile Design')

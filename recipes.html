@@ -18,10 +18,11 @@
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/recipes.css" rel="stylesheet" />
+    <link href="./css/forms.css" rel="stylesheet" />
     <title>Enkla Recept - Alla recept</title>
   </head>
   <body>
-    <div class="scheme py-2-xl">
+    <div class="scheme py-2-xl min-vh-100"">
       <ul class="skiplink">
         <li>
           <a href="#content">Hoppa till innehåll</a>
@@ -67,9 +68,13 @@
             </nav>
           </div>
           <!-- header-middle end -->
-
           <div class="header-right">
-            <button class="text-upper">Login</button>
+            <button
+              class="text-upper"
+              onclick="document.getElementById('login-modal').showModal()"
+            >
+              Logga in
+            </button>
             <div class="clr-scheme-widget">
               <label for="scheme-toggler" class="scheme-toggler-label">
                 <span class="sr-only">Mörkläge</span>
@@ -87,6 +92,68 @@
         </header>
       </div>
       <!-- HEADER END -->
+
+      <dialog id="login-modal" class="login-modal radius-lg" closedby="any">
+        <div class="modal-container">
+          <section class="modal-header">
+            <h2 class="heading">
+              Logga in på Enkla Recept
+              <span>För att ladda upp recept och skriva recensioner</span>
+            </h2>
+            <button
+              class="modal-close btn"
+              type="button"
+              onclick="document.getElementById('login-modal').close()"
+              autofocus
+            >
+              Stäng
+            </button>
+          </section>
+
+          <form class="login-form" action="#" method="post">
+            <label for="user-email">Ange E-post</label>
+            <input
+              id="user-email"
+              name="user-email"
+              type="email"
+              placeholder="t.ex. namn@exempel.se"
+              autocomplete="email"
+              required
+            />
+            <label for="user-pass">Ange Lösenord</label>
+            <input
+              id="user-pass"
+              name="user-pass"
+              type="password"
+              placeholder="lösenord"
+              required
+            />
+            <button class="btn btn-login" type="submit">Logga in</button>
+          </form>
+          <section class="login-social">
+            <p class="login-alt-txt">eller logga in med</p>
+            <div class="btn-group">
+              <button class="btn btn-social" type="button">
+                <img
+                  aria-hidden="true"
+                  src="./assets/icons/google.svg"
+                  alt=""
+                />
+                <span>Google</span>
+              </button>
+              <button class="btn btn-social" type="button">
+                <img aria-hidden="true" src="./assets/icons/apple.svg" alt="" />
+                <span>Apple</span>
+              </button>
+            </div>
+          </section>
+          <section class="modal-footer text-center">
+            <a href="#">Glömt lössenord?</a>
+            <p>Har du inte ett konto? <a href="#">Skapa konto</a></p>
+          </section>
+        </div>
+      </dialog>
+      <!-- LOGIN MODAL END -->
 
       <main class="content-grid my-2-xl min-vh-100">
         <section class="full hero content-grid my-end-2-xl">

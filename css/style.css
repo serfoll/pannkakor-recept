@@ -26,11 +26,13 @@
   --font-600: 600;
   --font-700: 700;
 
-  --text-h-1: var(--font-700) var(--d-xl) var(--ff-primary);
-  --text-h-2: var(--font-700) var(--d-xl-alt) var(--ff-primary);
+  --text-h-1: var(--font-700)
+    clamp(var(--d-xl-alt), 2.5vw + 0.5rem, var(--d-xl)) var(--ff-primary);
+  --text-h-2: var(--font-700)
+    clamp(var(--d-lg), 2.5vw + 0.5rem, var(--d-xl-alt)) var(--ff-primary);
   --text-h-3: var(--font-700) var(--d-lg) var(--ff-primary);
   --text-body: var(--d-md) var(--ff-primary);
-  --text-caption: var(--d-sm) var(--ff-primary);
+  --text-caption: var(--font-400) var(--d-sm) var(--ff-primary);
   --text-link: var(--d-md) var(--ff-primary);
   --text-link-nav: var(--font-600) var(--d-md) var(--ff-primary);
 
@@ -44,9 +46,22 @@
   --radius-lg: var(--d-lg);
 }
 
+:focus-visible {
+  border-radius: 0.3rem;
+  outline: 0.24rem dashed var(--clr-border);
+  outline-offset: 0.12rem;
+}
+
 body {
   /* background-color: var(--clr-danger-100); */
   font-family: var(--ff-primary);
+  min-block-size: 100vh;
+  position: relative;
+
+  /* disable scroll when dialog or navigation is open */
+  &:has(dialog:open, .nav-toggler-box:checked) {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -65,17 +80,9 @@ em {
 }
 
 a,
-input,
 button {
   cursor: pointer;
   border: none;
-
-  &:focus-visible,
-  &:focus-within {
-    border-radius: 0.3rem;
-    outline: 0.24rem dashed var(--clr-border);
-    outline-offset: 0.12rem;
-  }
 }
 
 a,
@@ -85,6 +92,18 @@ a:visited {
 }
 
 /* utilities */
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
 .border-xs-light {
   border: var(--border-xs-light);
 }
@@ -174,7 +193,7 @@ a:visited {
   --padding-inline: clamp(var(--spacing-md), 2.5vw + 0.5rem, var(--spacing-xl));
   --feature-max-width: minmax(0, 5rem);
   --content-max-width: 75rem;
-  --breakin-max-width: 75rem;
+  --breakin-max-width: 80ch;
 
   /* total feature column size on each side, this allows contents inside feature to be centered */
   --feature-col-size: calc(
@@ -237,6 +256,10 @@ a:visited {
   object-fit: cover;
 }
 
+.btn {
+  border-radius: var(--d-xs);
+}
+
 /* BLOCKS */
 a,
 button {
@@ -250,6 +273,10 @@ button {
       background-color: var(--clr-secondary);
     }
   }
+}
+
+.nav-wrapper {
+  position: relative;
 }
 
 .header {
@@ -335,13 +362,13 @@ button {
     justify-items: center;
 
     h1 {
-      font: var(--text-h-1);
       text-align: center;
       text-wrap: pretty;
       em {
         color: var(--clr-primary);
       }
     }
+
     p {
       text-align: center;
       max-inline-size: 65ch;

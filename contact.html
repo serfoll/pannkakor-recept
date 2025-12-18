@@ -17,10 +17,11 @@
 
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/forms.css" rel="stylesheet" />
     <title>Enkla Recept - Kontakt</title>
   </head>
   <body>
-    <div class="scheme py-2-xl">
+    <div class="scheme py-2-xl min-vh-100 wrapper">
       <ul class="skiplink">
         <li>
           <a href="#content">Hoppa till innehåll</a>
@@ -72,7 +73,12 @@
           <!-- header-middle end -->
 
           <div class="header-right">
-            <button class="text-upper">Login</button>
+            <button
+              class="text-upper"
+              onclick="document.getElementById('login-modal').showModal()"
+            >
+              Logga in
+            </button>
             <div class="clr-scheme-widget">
               <label for="scheme-toggler" class="scheme-toggler-label">
                 <span class="sr-only">Mörkläge</span>
@@ -91,10 +97,154 @@
       </div>
       <!-- HEADER END -->
 
-      <main id="content" class="content-grid my-2-xl min-vh-100"></main>
+      <dialog id="login-modal" class="login-modal radius-lg" closedby="any">
+        <div class="modal-container">
+          <section class="modal-header">
+            <h2 class="heading">
+              Logga in på Enkla Recept
+              <span>För att ladda upp recept och skriva recensioner</span>
+            </h2>
+            <button
+              class="modal-close btn"
+              type="button"
+              onclick="document.getElementById('login-modal').close()"
+              autofocus
+            >
+              Stäng
+            </button>
+          </section>
+
+          <form class="login-form" action="#" method="post">
+            <label for="user-email">Ange E-post</label>
+            <input
+              id="user-email"
+              name="user-email"
+              type="email"
+              placeholder="t.ex. namn@exempel.se"
+              autocomplete="email"
+              required
+            />
+            <label for="user-pass">Ange Lösenord</label>
+            <input
+              id="user-pass"
+              name="user-pass"
+              type="password"
+              placeholder="lösenord"
+              required
+            />
+            <button class="btn btn-login" type="submit">Logga in</button>
+          </form>
+          <section class="login-social">
+            <p class="login-alt-txt">eller logga in med</p>
+            <div class="btn-group">
+              <button class="btn btn-social" type="button">
+                <img
+                  aria-hidden="true"
+                  src="./assets/icons/google.svg"
+                  alt=""
+                />
+                <span>Google</span>
+              </button>
+              <button class="btn btn-social" type="button">
+                <img aria-hidden="true" src="./assets/icons/apple.svg" alt="" />
+                <span>Apple</span>
+              </button>
+            </div>
+          </section>
+          <section class="modal-footer text-center">
+            <a href="#">Glömt lössenord?</a>
+            <p>Har du inte ett konto? <a href="#">Skapa konto</a></p>
+          </section>
+        </div>
+      </dialog>
+      <!-- LOGIN MODAL END -->
+
+      <main id="content" class="contact content-grid my-2-xl">
+        <section class="contact-container">
+          <div class="summary">
+            <h1 class="text-h-1">Kom i kontakt med oss på Enkla Recept</h1>
+            <p>
+              Har du frågor, feedback eller vill du bara berömma oss? Vi älskar
+              att höra från dig! Fyll i formuläret så hör vi av oss så snart som
+              möjligt. Eller kontakta oss direkt via e-posten nedan!
+            </p>
+            <p>
+              <span class="block">E-post</span>
+              <a href="#">hello@enklarecept.se</a>
+            </p>
+          </div>
+
+          <form action="#" method="post" class="contact-form">
+            <div class="flex top">
+              <label class="grid">
+                <span>Förnamn <i>*</i></span>
+                <input
+                  type="text"
+                  name="user-given-name"
+                  autocomplete="given-name"
+                  placeholder="Ange förnamn"
+                  required
+                />
+              </label>
+              <label class="grid">
+                <span>Efternamn</span>
+                <input
+                  type="text"
+                  name="user-family-name"
+                  autocomplete="family-name"
+                  placeholder="Ange efternamn"
+                />
+              </label>
+            </div>
+
+            <label class="grid">
+              <span>E-post <i>*</i></span>
+              <input
+                type="email"
+                name="user-email"
+                autocomplete="email"
+                placeholder="Ange e-post"
+                required
+              />
+            </label>
+
+            <label class="grid">
+              <span>Ämne <i>*</i></span>
+              <select name="subject" required>
+                <option value="" disabled selected>Välj ämne</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </label>
+
+            <label class="grid" for="msg">
+              <span>Meddelande <i>*</i></span>
+              <textarea
+                name="msg"
+                id="msg"
+                rows="4"
+                placeholder="Skriv in ditt meddelande"
+                required
+              ></textarea>
+            </label>
+
+            <label class="flex">
+              <input type="checkbox" name="gdpr" required />
+              <span
+                >Vi behandlar dina uppgifter i enlighet med GDPR (General Data
+                Protection Regulation) <i>*</i></span
+              >
+            </label>
+
+            <p>Alla fält markerade med (<i>*</i>) är obligatoriska</p>
+
+            <button class="btn btn-send" type="submit">Skicka</button>
+          </form>
+        </section>
+      </main>
       <!-- main end -->
 
-      <div class="content-grid">
+      <div class="content-grid footer-wrapper">
         <footer
           class="footer flow-block feature px-md py-sm clr-bg-light radius-lg"
         >

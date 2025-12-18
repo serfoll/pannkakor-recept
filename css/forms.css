@@ -1,3 +1,17 @@
+.btn {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-muted);
+  inline-size: webkit-fill-available; /* support for samsung internet 5.0+ */
+  block-size: fit-content;
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-sm);
+
+  &:hover {
+    background-color: var(--clr-bg-dark);
+    border-color: var(--clr-border-muted);
+  }
+}
+
 /*login modal*/
 .login-modal {
   &:open {
@@ -15,19 +29,6 @@
         2vw + 0.5rem,
         var(--spacing-xl)
       );
-    }
-
-    .btn {
-      background-color: var(--clr-bg);
-      color: var(--clr-text-muted);
-      inline-size: webkit-fill-available; /* support for samsung internet 5.0+ */
-      block-size: fit-content;
-      padding-inline: var(--spacing-md);
-      padding-block: var(--spacing-sm);
-
-      &:hover {
-        background-color: var(--clr-bg-dark);
-      }
     }
   }
 }
@@ -125,3 +126,82 @@
     }
   }
 }
+
+/* CONTACT FORM */
+.contact-container {
+  display: flex;
+  gap: var(--spacing-lg);
+
+  .summary {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-auto-rows: max-content;
+
+    > p {
+      a {
+        color: var(--clr-secondary);
+        &:hover {
+          color: var(--clr-primary);
+        }
+      }
+    }
+  }
+
+  @media (width <= 48rem) {
+    flex-direction: column;
+  }
+}
+
+.contact-form {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: var(--spacing-md);
+
+  flex-grow: 1;
+  flex-basis: 0;
+
+  .grid {
+    gap: var(--spacing-xs);
+  }
+
+  > .flex {
+    gap: var(--spacing-xs);
+  }
+
+  /* make all children elements of .top with the class of .flex (class="top flex") flex-grow: 1 */
+  .top {
+    &.flex {
+      > * {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    border: 1px solid var(--clr-border-muted);
+    padding: var(--spacing-xs);
+  }
+
+  input[type='checkbox'] {
+    inline-size: 2.5rem;
+    aspect-ratio: 1;
+  }
+
+  i {
+    color: var(--clr-danger);
+  }
+
+  @media (width <= 29rem) {
+    > .top {
+      &.flex {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+/*break points*/

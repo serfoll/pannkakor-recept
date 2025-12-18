@@ -1,0 +1,48 @@
+.recipes {
+  margin-block: clamp(var(--spacing-md), 2vw + 0.5rem, var(--spacing-xl));
+
+  > * + * {
+    margin-block-end: var(--spacing-lg);
+  }
+
+  [role='list'] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    gap: clamp(var(--spacing-lg), 2.5vw + 0.5rem, var(--spacing-2-xl));
+  }
+}
+
+.recipe {
+  display: grid;
+  background-color: var(--clr-bg-light);
+  padding-inline: var(--spacing-md);
+  padding-block-end: var(--spacing-md);
+
+  > * + * {
+    margin-block-start: var(--spacing-md);
+  }
+
+  h3 {
+    max-inline-size: 30ch;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    order: -1;
+    margin-block-end: var(--spacing-md);
+  }
+
+  p {
+    max-inline-size: 40ch;
+    block-size: 8ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-primary {
+    text-align: center;
+    border-radius: var(--radius-lg);
+  }
+}

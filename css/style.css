@@ -105,6 +105,14 @@ a:visited {
   margin-block-end: var(--spacing-xl);
 }
 
+.my-end-2-xl {
+  margin-block-end: var(--spacing-2-xl);
+}
+
+.my-start-lg {
+  margin-block-start: var(--spacing-lg);
+}
+
 .py-2-xl {
   padding-block: var(--spacing-2-xl);
 }
@@ -157,40 +165,51 @@ a:visited {
   text-transform: uppercase;
 }
 
+.min-vh-100 {
+  min-block-size: 100vh;
+}
+
 /* COMPOSITION */
 .content-grid {
-  --padding-inline: min(var(--spacing-md), var(--spacing-xl));
+  --padding-inline: clamp(var(--spacing-md), 2.5vw + 0.5rem, var(--spacing-xl));
   --feature-max-width: minmax(0, 5rem);
   --content-max-width: 75rem;
-  --breakin-max-width: 85ch;
+  --breakin-max-width: 75rem;
 
+  /* total feature column size on each side, this allows contents inside feature to be centered */
   --feature-col-size: calc(
     (var(--feature-max-width) - var(--content-max-width)) / 2
   );
 
+  /* total feature column size on each side*/
   --content-col-size: calc(
     (var(--content-max-width) - var(--breakin-max-width)) / 2
   );
 
+  /* breakin pushes the content to center*/
   --breakin-size: min(
     100% - (var(--padding-inline) * 2),
     var(--breakin-max-width)
   );
 
   display: grid;
+  /* content breakpoints */
   grid-template-columns:
-    [full-start] minmax(var(--padding-inline), 1fr)
-    [feature-start] var(--feature-max-width)
-    [content-start] minmax(0, var(--content-col-size))
-    [breakin-start] var(--breakin-size) [breakin-end]
-    minmax(0, var(--content-col-size)) [content-end]
-    var(--feature-max-width) [feature-end]
-    minmax(var(--padding-inline), 1fr) [full-end];
+    [full-start] minmax(var(--padding-inline), 1fr) /*full area start*/
+    [feature-start] var(--feature-max-width) /* feature area start*/
+    [content-start] minmax(0, var(--content-col-size)) /* content area start*/
+    [breakin-start] var(--breakin-size)
+    [breakin-end] /* breakin area start and end */
+    minmax(0, var(--content-col-size)) [content-end] /* content area end*/
+    var(--feature-max-width) [feature-end] /* feature area start*/
+    minmax(var(--padding-inline), 1fr) [full-end]; /* full area end*/
 
+  /* default content area for child elements*/
   > * {
     grid-column: content;
   }
 
+  /* content area for elements with the full class*/
   > .full {
     grid-column: full;
 
@@ -199,6 +218,7 @@ a:visited {
     }
   }
 
+  /* content area for elements with the feature class */
   > .feature {
     grid-column: feature;
     > *:not(.breakin, .feature, .full) {
@@ -206,6 +226,7 @@ a:visited {
     }
   }
 
+  /* content area for elements with the breakin class */
   > .breakin {
     grid-column: breakin;
   }
@@ -386,6 +407,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  span {
+    font-size: var(--d-2-xl);
+  }
 }
 
 .skiplink {
@@ -538,7 +562,6 @@ button {
 
     > * + * {
       margin-block-start: var(--spacing-md);
-      border: 1px solid violet;
     }
   }
 
@@ -554,7 +577,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (width < 600px) {
   .offers-list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -585,6 +608,67 @@ button {
     p {
       text-align: center;
       text-wrap: balance;
+    }
+  }
+}
+
+@media only screen and (width < 540px) {
+  .offers-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      'top'
+      'mid'
+      'bottom';
+    li {
+      grid-area: top;
+
+      &:nth-of-type(2) {
+        grid-area: mid;
+      }
+
+      &:last-of-type {
+        grid-area: bottom;
+      }
+    }
+  }
+
+  .habits {
+    margin-block: var(--spacing-2-xl);
+    grid-template-columns: repeat(1, 1fr);
+
+    h2,
+    p {
+      text-align: left;
+      text-wrap: balance;
+    }
+  }
+}
+
+@media (width < 450px) {
+  .newsletter {
+    h2 {
+      text-align: unset;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
+    > * + * {
+      margin-block-start: var(--spacing-lg);
+    }
+
+    form {
+      flex-direction: column;
+      gap: var(--spacing-md);
+      input {
+        width: 100%;
+        border: var(--border-3-xs-dark);
+      }
+      .btn-primary {
+        width: 100%;
+        height: 45px;
+      }
     }
   }
 }

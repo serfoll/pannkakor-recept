@@ -17,6 +17,7 @@
 
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/recipes.css" rel="stylesheet" />
     <title>Enkla Recept - Alla recept</title>
   </head>
   <body>
@@ -87,10 +88,18 @@
       </div>
       <!-- HEADER END -->
 
-      <main class="content-grid my-2-xl">
-        <section class="hero py-xl">
-          <h1>utforska alla recept..</h1>
-          <p class="">Summering</p>
+      <main class="content-grid my-2-xl min-vh-100">
+        <section class="full hero content-grid my-end-2-xl">
+          <div class="breakin">
+            <h1 class="text-h-1 text-center">
+              Upptäck recept som gör vardagen enklare
+            </h1>
+            <p class="">
+              Här får du tillgång till alla våra recept, framtagna för att vara
+              snabba, goda och lätta att följa. Dyk in och hitta nya favoriter
+              för både stressiga vardagar och långsamma helgkvällar.
+            </p>
+          </div>
         </section>
 
         <section class="recipes">
@@ -100,10 +109,10 @@
           </p>
           <ul role="list">
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Krämig pasta med vitlök</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://images.unsplash.com/photo-1570549986390-6bd150ac3515?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -122,10 +131,10 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Ugnsrostad lax med citron</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -144,10 +153,10 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Kryddig shakshuka</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://images.unsplash.com/photo-1697546307745-c05002aa1c1e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -172,10 +181,10 @@
           <p>Senast nytt från vårt team.</p>
           <ul role="list">
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Nudelbowl med sesam</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://plus.unsplash.com/premium_photo-1670978265021-ef0f575de914?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -194,10 +203,10 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Vegetarisk tacos</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -215,10 +224,10 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="recipe">
                 <h3>Citronkyckling</h3>
                 <img
-                  src="https://picsum.dev/500/500"
+                  src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   width="300"
                   height="300"
                   alt=""
@@ -247,7 +256,7 @@
         >
           <section class="full content-grid features newsletter">
             <h2 class="breakin text-h-2 text-center">
-              Få ny inspiration direkt i mejlkorgen
+              Få nya inspirationer direkt i mejlkorgen
             </h2>
             <p class="breakin text-center" id="subscribe-summary">
               Prenumerera och få nya recept, veckotips och smarta idéer för att
@@ -272,7 +281,7 @@
               och lättlagade recept.
             </p>
             <a href="#nav">
-              <span>ikon</span>
+              <span>&#8593;</span>
               <span class="sr-only">Hoppa till navigation</span>
             </a>
           </section>

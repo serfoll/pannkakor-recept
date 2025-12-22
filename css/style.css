@@ -57,7 +57,10 @@ body {
   font-family: var(--ff-primary);
   min-block-size: 100vh;
   position: relative;
+}
 
+html,
+body {
   /* disable scroll when dialog or navigation is open */
   &:has(dialog:open, .nav-toggler-box:checked) {
     overflow: hidden;
@@ -249,6 +252,11 @@ a:visited {
   > .breakin {
     grid-column: breakin;
   }
+
+  &:has(.header) {
+    position: sticky;
+    top: 1rem;
+  }
 }
 
 .img-lg {
@@ -280,8 +288,7 @@ button {
 }
 
 .header {
-  position: sticky;
-  top: 0;
+  block-size: fit-content;
   grid-column: feature;
   display: grid;
   grid-template-areas: 'brand nav btns';
